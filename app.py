@@ -1,17 +1,22 @@
 from flask import Flask, render_template, url_for, request
-import requests as re
+import json
 
-app = Flask(__name__)
+app = Flask(__name__) #Object Declare
+deny = "Request Denied! Please do not hack this web :'("
 
-@app.route('/')
+
+@app.route('/') #Home Page atau Halaman Menu
 def index():
     return  render_template('index.html')
 
-@app.route('/calculator', methods = ['GET', 'POST'])
+@app.route('/calculator', methods = ['GET', 'POST']) #Halaman Kalkulator
 def calcul():
-    return render_template('kalku.html')
+    if request.method == "GET":
+        return render_template('kalku.html')
+    else:
+        return deny
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods = ['GET', 'POST']) #Halaman form masukkan data
 def login():
     if request.method == "POST":
         Nama = request.form['nama']
@@ -20,15 +25,23 @@ def login():
     elif request.method == "GET":
         return render_template('upload.html')
     else:
-        return 'HTTP methods error'
+        return deny
 
-@app.route('/about', methods = ['GET', 'POST'])
+@app.route('/about', methods = ['GET']) #Halaman biodata dan CV
 def aboutme():
-    return render_template('aboutme.html')
+    if request.method == 'GET':
+        return render_template('aboutme.html')
+    else :
+        return deny
 
-@app.route('/csvtojson', method = ['GET', 'POST'])
+@app.route('/csvtojson', methods = ['GET', 'POST']) #Halaman form csv to tabel json
 def csvtojson():
-    return render_template('csvtojson.html')
+    if request.method == 'GET':
+        return render_template('csvtojson.html')
+    elif request.method == "POST":
+        return render_template('')
+    else:
+        return deny
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) #Run App dengan debug aktif

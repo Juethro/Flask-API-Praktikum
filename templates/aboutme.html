@@ -1,0 +1,36 @@
+{% block head %}
+    <title>About Me</title>
+{% endblock %}
+
+{% block header %}
+    <h1>My Biodata</h1>
+{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td>Denis Muhammad Jethro</td>
+        </tr>
+        <tr>
+            <td>NIM</td>
+            <td>162112133028</td>
+        </tr>
+        <tr>
+            <td>Tanggal</td>
+            <td>23 Juni 2003</td>
+        </tr>
+        <tr>
+            <td>Motor</td>
+            <td>SupraX 125</td>
+        </tr>
+        <tr>
+            <td>Semester</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="{{url_for('index')}}">Home</a>
+{% endblock %}
+
