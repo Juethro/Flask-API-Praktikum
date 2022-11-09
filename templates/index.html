@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <h2>Halo, ekstensi berhasil</h2>
+<title>Home</title>
+{% endblock %}
+
+{% block header %}
+<h1>Main Menu</h1>
 {% endblock %}
 
 {% block body %}
-    <p>BERHASIL!!</p>
+    <p>MENU</p>
     <a href="{{ url_for('login')}}">Form Login</a>
     <a href="{{ url_for('aboutme') }}">About Me</a>
     <a href="{{ url_for('calcul')}}">Kalkulator</a>
+    <a href="{{ url_for('csvtojson')}}">CSV to JSON</a>
 
 {% endblock %}

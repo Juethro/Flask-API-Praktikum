@@ -5,9 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=auto, initial-scale=1.0">
     {% block head %}{% endblock %}
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/4-Column-Team-Block---Circles.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/dh-card-image-left-dark-1.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/dh-card-image-left-dark.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Features-Image-images.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/LinkedIn-like-Profile-Box.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Navbar-With-Button-icons.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/responsive-blog-card-slider.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Single-Advisor-Profile.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Team-Presentation---2-Persons---Social-Media-Icon.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Team-team.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/Team.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/untitled-1.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/untitled-2.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/untitled-3.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='assets/css/untitled-4.css') }}">
 
 </head>
+
 <body>
+    <nav class="navbar navbar-light navbar-expand-md bg-warning fs-5 py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="Biodata_Rizkiwi.html"><span class="fs-3 fw-bolder">Jethro</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active link-dark" href="Biodata_Rizkiwi.html">Biodata</a></li>
+                    <li class="nav-item"><a class="nav-link fw-lighter link-dark" href="Nomor2.html">Alat Akar</a></li>
+                    <li class="nav-item"><a class="nav-link fw-lighter link-dark" href="Nomor3.html">CSVtoJson</a></li>
+            </div>
+        </div>
+    </nav>
     {% block script %}{% endblock %}
     <header>
         {% block header %}{% endblock %}

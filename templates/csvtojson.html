@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Convert csv to JSON</title>
+{% endblock %}
+
+{% block header%}
+<h1>Please Upload Your CSV File</h1>
+{% endblock %}
+
+{% block body%}
+<form action = "http://localhost:5000/convert" method = "POST" enctype="multipart/form-data" >
+    <input type = "file" name = "file" />
+    <input type = "submit"/>
+</form>
+{% endblock %}
