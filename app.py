@@ -39,7 +39,7 @@ def aboutme():
     else :
         return deny
 
-@app.route('/csvtojson') #Halaman form csv to tabel json
+@app.route('/csvtojson') #Halaman form csv to json
 def csvtojson():
     return render_template('csvtojson.html')        # panggil html converter
 
