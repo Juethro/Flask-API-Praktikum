@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, send_file, redirect
+from flask import Flask, render_template, url_for, request, send_file
 import json
 import csv
 import math
@@ -11,15 +11,15 @@ deny = "Request Denied! Please do not hack this web :'("
 def index():
     return  render_template('index.html')
 
-@app.route('/akar', methods = ['GET', 'POST']) #Halaman Kalkulator
+@app.route('/akar', methods = ['GET', 'POST']) #Halaman Akar/ sqrt
 def calcul():
     if request.method == "GET":
-        return render_template('kalku.html')
+        return render_template('sqrt.html')
     elif request.method == "POST":
         number = int(request.form['angka'])
         hasil = math.sqrt(number)
         hasil = str(hasil)
-        return pass
+        return f"Hasilnya adalah {hasil}"
 
 @app.route('/login', methods = ['GET', 'POST']) #Halaman form masukkan data
 def login():
