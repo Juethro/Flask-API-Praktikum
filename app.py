@@ -41,7 +41,7 @@ def aboutme():
 
 @app.route('/csvtojson') #Halaman form csv to json
 def csvtojson():
-    return render_template('csvtojson.html')        # panggil html converter
+    return render_template('csvtojson.html')        # panggil  converter
 
 @app.route('/convert', methods = ['GET', 'POST'])
 def convert():
